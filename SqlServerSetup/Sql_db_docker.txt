@@ -1,0 +1,6 @@
+
+docker pull mcr.microsoft.com/mssql/server:latest
+
+
+docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=Your_Pass_123" -p 1433:1433 -d mcr.microsoft.com/mssql/server:latest
+		docker exec -it 3a224c0beba8 /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P Your_Pass_123
